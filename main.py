@@ -45,7 +45,7 @@ def main():
                 sys.exit()
             for shot in shots:
                 if obj.collides_with(shot):
-                    obj.kill()
+                    obj.split()
                     shot.kill()
                     break
 
