@@ -1,5 +1,6 @@
 import pygame
 from constants import *
+from player import *
 
 def main():
     pygame.init()
@@ -15,7 +16,10 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
+        
         screen.fill("black")
+        player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+        player.draw(screen)
         pygame.display.flip()
         dt = clock.tick(FPS)/1000
 
